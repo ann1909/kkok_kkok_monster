@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monster</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="monster" class="mobile_container">
+    <div class="wrap">
+      <h2>꼭꼭몬 마을</h2>
+
+      <!-- 꼭꼭몬 위치 설정 -->
+      <div class="monster_wrap">
+        <!-- 3번째 산 -->
+        <div class="row">
+          <div class="mon mon_shadow col-2 offset-6">
+            <img src="images/체리둥이몬.png
+            " alt="체리둥이몬">
+          </div>
+
+          <div class="mon mon_shadow col-2 offset-1">
+            <img src="images/밥풀몬.png" alt="밥풀몬">
+          </div>
+        </div>
+        <!-- END : .row -->
+
+        <!-- 2번째 산 -->
+        <div class="row">
+          <div class="mon mon_shadow col-3">
+            <img src="images/체리둥이몬.png" alt="체리둥이몬">
+          </div>
+
+          <div class="mon mon_shadow col-3 offset-1">
+            <img src="images/체리둥이몬.png" alt="체리둥이몬">
+          </div>
+        </div>
+        <!-- END : .row -->
+
+        <!-- 1번째 산 -->
+        <div class="row">
+          <div class="mon mon_shadow col-4 offset-5">
+            <img src="images/체리둥이몬.png" alt="체리둥이몬">
+            <div class="mon_shadow"></div>
+          </div>
+        </div>
+        <!-- END : .row -->
+      </div>
+      <!-- END : .monster_wrap -->
+
+      <div class="btn_wrap">
+        <a href="home.html">
+          <img src="images/back_blue.png" alt="홈으로가기">
+        </a>
+
+        <div class="btn_book">
+          <img src="images/monsterbook.png" alt="몬스터북">
+        </div>
+      </div>
+      <!-- END : .btn_wrap -->
+    </div>
+    <!-- END : .wrap -->
+
+    <!-- --monster book layer-------------------------------------------------------------- -->
+    <div class="overlay monster_book_layer">
+      <div class="wrap">
+        <div class="layer_box layer_blue">
+          <!-- 1번째 -->
+          <div class="book_row row-vh d-flex flex-row justify-content-between">
+            <div class="item">
+              <!-- User Monster Table에 몬스터가 있다면 이미지 표시 없다면 ? 표시 -->
+              <div>
+                <img src="images/book01.png" alt="">
+              </div>
+              <!-- <div>?</div> -->
+              <div>01</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>02</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>03</div>
+            </div>
+          </div>
+          <!-- END : .book_row -->
+
+          <!-- 2번째 -->
+          <div class="book_row row-vh d-flex flex-row justify-content-between">
+            <div class="item">
+              <div>?</div>
+              <div>04</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>05</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>06</div>
+            </div>
+          </div>
+          <!-- END : .book_row -->
+
+          <!-- 3번째 -->
+          <div class="book_row row-vh d-flex flex-row justify-content-between">
+            <div class="item">
+              <div>?</div>
+              <div>07</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>08</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>09</div>
+            </div>
+          </div>
+          <!-- END : .book_row -->
+
+          <!-- 4번째 -->
+          <div class="book_row row-vh d-flex flex-row justify-content-between">
+            <div class="item">
+              <div>?</div>
+              <div>10</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>11</div>
+            </div>
+            <div class="item">
+              <div>?</div>
+              <div>12</div>
+            </div>
+          </div>
+          <!-- END : .book_row -->
+
+          <!-- 확인 버튼 -->
+          <button class="layer_button layer_button_blue">확인</button>
+        </div>
+        <!-- END : .layer_box -->
+      </div>
+      <!-- END : .wrap -->
+    </div>
+    <!-- END : .monster_book_layer -->
+
+    <!-- -- monster information layer -------------------------------------------------- -->
+    <div class="overlay monster_info_layer">
+      <div class="wrap">
+        <div class="layer_box layer_blue">
+          <div class="monster_info mon_shadow">
+            <img src="images/체리둥이몬.png" alt="체리둥이몬">
+          </div>
+
+          <div class="mon_name">체리둥이몬</div>
+          <p>
+            안녕 나는 체리둥이몬이야! 나는 체리체리해 그리고 힘들어!
+          </p>
+
+          <!-- 확인 버튼 -->
+          <button class="layer_button layer_button_blue">확인</button>
+        </div>
+        <!-- END : .layer_box -->
+      </div>
+      <!-- END : .wrap -->
+    </div>
+    <!-- END : .monster_info_layer -->
+  </div>
+  <!-- END : #mobile_container -->
+</body>
+</html>

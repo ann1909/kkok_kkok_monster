@@ -1,0 +1,896 @@
+* {
+  font-family: 'Jua', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  outline: none;
+}
+
+::placeholder {
+  color: #bdbdbd;
+}
+
+
+/* -- BACKGROUND ------------------------------------------------------------------------- */
+/* 모바일 컨테이너 */
+.mobile_container {
+  /* 사이즈 조정 */
+  width: 375px;
+  max-width: 375px;
+  height: 812px;
+  max-height: 812px;
+  box-sizing: border-box;
+  padding: 40px 24px;
+  overflow: hidden;
+  position: relative;
+  
+  /* 배경 이미지 */
+  background-image: url("/images/bg.png");
+  background-size: cover;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.roof {
+  width: 375px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* --BUTTON ------------------------------------------------------------------------- */
+/* --닫기 버튼-- */
+.close {
+  width: 51px;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --들어가는 효과가 있는 버튼-- */
+.btn_push {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  
+  /* 사이즈 */
+  width: 240px;
+  height: 99px;
+  border-radius: 50px;
+  background: white;
+  border: 10px solid;
+  
+  /* 폰트 */
+  font-size: 35px;
+  text-align: center;
+  line-height: 81px;
+
+  /* 애니메이션 */
+  transition: all 0.2s linear;
+}
+
+/* 아래쪽에 위치한 버튼 일정한 위치에 설정 */
+.btn_bottom {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --로그인 버튼-- */
+.btn_login{
+  border-color: #ff9191;
+  box-shadow: 0px 15px 0px #d07171, 0px 18px 0px 12px #ffdbdb;
+  color: #ff9191;
+}
+
+.btn_login_push {
+  box-shadow: 0px 0px 0px #d07171, 0px 0px 0px 12px #ffdbdb;
+  top: 18px;
+  color: #ff9191;
+}
+
+.btn_login:visited {
+  color: #ff9191;
+}
+
+/* --회원가입 버튼-- */
+.btn_join{
+  border-color: #93bcff;
+  box-shadow: 0px 15px 0px #80a5dc, 0px 18px 0px 12px #ddeaff;
+  color: #93bcff;
+}
+
+.btn_join_push {
+  box-shadow: 0px 0px 0px #80a5dc, 0px 0px 0px 12px #ddeaff;
+  top: 18px;
+  color: #93bcff;
+}
+
+.btn_join:visited {
+  color: #93bcff;
+}
+
+/* --캐릭터 설정 버튼-- */
+.btn_char{
+  border-color: #a5e1ae;
+  box-shadow: 0px 15px 0px #77c88f, 0px 18px 0px 12px #d2eee1;
+  color: #a5e1ae;
+  font-size: 30px;
+}
+
+.btn_char_push {
+  box-shadow: 0px 0px 0px #77c88f, 0px 0px 0px 12px #d2eee1;
+  top: 18px;
+  color: #a5e1ae;
+}
+
+.btn_char:visited {
+  color: #a5e1ae;
+}
+
+/* --꼭꼭몬 구하기 버튼-- */
+.btn_game {
+  /* 사이즈 */
+  width: 298px;
+  height: 99px;
+  border-radius: 40px;
+}
+
+/* --꼭꼭몬 마을 버튼-- */
+.btn_mon, .btn_mychar {
+  display: block;
+  width: 138px;
+  height: 122px;
+  border-radius: 40px;
+  font-size: 30px;
+  line-height: 1.2;
+  padding-top: 4px;
+}
+
+/* --뒤로가기 버튼-- */
+.btn_back {
+  width: 62px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn_back > img {
+  width: 100%;
+}
+
+/* --완료 버튼-- */
+.finish_btn {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4em;
+  font-size: 30px;
+  background: white;
+  border: 8px solid white;
+  border-radius: 40px;
+  transition: 0.2s;
+
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.finish_blue {
+  border: 8px solid #80a5dc;
+  color: #80a5dc;
+}
+
+.finish_blue:hover, .finish_blue:active {
+  background: #80a5dc;
+  border: 8px solid #80a5dc;
+  color: white;
+}
+
+
+/* -- OVERLAY LAYER ------------------------------------------------------------------------- */
+/* --불투명 검정색 배경-- */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9;
+  box-sizing: border-box;
+  padding: 40px 24px;
+  overflow: hidden;
+
+  /* 처음에 안보이게 설정 */
+  display: none;
+}
+
+/* --레이어 안 박스-- */
+.layer_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 3.2em 2.4em;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 24px;
+}
+
+.layer_box > p {
+  font-size: 18px;
+  margin-bottom: 3em;
+}
+
+/* --레이어 색-- */
+/* 초록 */
+.layer_green {
+  border: 5px solid #77c88f;
+}
+
+/* 파랑 */
+.layer_blue {
+  border: 5px solid #80a5dc;
+}
+
+/* 빨강 */
+.layer_pink {
+  border: 5px solid #ff9191;
+}
+
+/* --글자 색 변경-- */
+/* 초록 */
+.layer_green span {
+  color: #77c88f;
+}
+
+/* 파랑 */
+.layer_blue span {
+  color: #80a5dc;
+}
+
+/* 빨강 */
+.layer_pink span {
+  color: #ff9191;
+}
+
+/* --레이어 안 버튼-- */
+.layer_button {
+  display: block;
+  width: 204px;
+  height: 84px;
+  font-size: 32px;
+  line-height: 80px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 32px;
+  color: white;
+  transition-duration: 0.2s;
+  box-sizing: border-box;
+}
+
+/* --버튼 색-- */
+/* 초록 */
+.layer_button_green {
+  background: #77c88f;
+  border: 5px solid #77c88f;
+}
+
+.layer_button_green:hover {
+  background: white;
+  color: #77c88f;
+  border: 5px solid #77c88f;
+}
+
+/* 파랑 */
+.layer_button_blue {
+  background: #80a5dc;
+  border: 5px solid #80a5dc;
+}
+
+.layer_button_blue:hover {
+  background: white;
+  color: #80a5dc;
+  border: 5px solid #80a5dc;
+}
+
+/* 빨강 */
+.layer_button_pink {
+  background: #ff9191;
+  border: 5px solid #ff9191;
+}
+
+.layer_button_pink:hover {
+  background: white;
+  color: #ff9191;
+  border: 5px solid #ff9191;
+}
+
+
+/* -- INDEX PAGE ------------------------------------------------------------------------- */
+#index > .wrap > button:first-child {
+  margin-top: 190px;
+  margin-bottom: 98px;
+}
+
+
+/* -- LOGIN PAGE ------------------------------------------------------------------------- */
+/* close 버튼 position 줘서 roof 이미지 위에 위치시킴 */
+#login {
+  position: relative;
+}
+
+#login form {
+  padding-top: 110px;
+}
+
+#login_form {
+  width: 100%;
+  padding: 82px 30px;
+  /* margin-bottom: 4.2em; */
+  box-sizing: border-box;
+  border: 5px solid #ff9191;
+  border-radius: 26px;
+  background: #ffdbdb;
+}
+
+#login_form h3 {
+  color: #ff9191;
+}
+
+#login_form label {
+  width: 100%;
+}
+
+#login_form input[type=text]{
+  width: 100%;
+  height: 3.4em;
+  padding: 0.8em 1.2em;
+  border-radius: 24px;
+  border: none;
+}
+
+
+/* -- JOIN PAGE ------------------------------------------------------------------------- */
+/* close 버튼 position 줘서 roof 이미지 위에 위치시킴 */
+#join {
+  position: relative;
+}
+
+#join form {
+  padding-top: 62px;
+}
+
+#join_form {
+  width: 100%;
+  padding: 24px 30px;
+  /* margin-bottom: 1em; */
+  box-sizing: border-box;
+  border: 5px solid #93bcff;
+  border-radius: 24px;
+  background: #ddeaff;
+}
+
+#join_form h3 {
+  color: #93bcff;
+  font-size: 1.2em;
+  margin-bottom: 0.1em;
+}
+
+#join_form label {
+  width: 100%;
+}
+
+#join_form label:not(:last-child){
+  margin-bottom: 1.2em;
+}
+
+#join_form input[type=text]{
+  width: 100%;
+  height: 3em;
+  padding: 0.8em 1.2em;
+  border-radius: 24px;
+  border: none;
+}
+
+
+/* -- CHARACTER PAGE ------------------------------------------------------------------------- */
+/* --캐릭터 선택-- */
+#character .char {
+  width: 130px;
+  height: 190px;
+  box-sizing: border-box;
+  background: #a5e1ae;
+  border: 5px solid #77c88f;
+  border-radius: 16px;
+  position: relative;
+}
+
+#character .char_wrap {
+  padding-top: 74px;
+  padding-bottom: 34px;
+}
+
+#character .char_wrap > .char:first-child{
+  /* 서비스 크기에 맞게 bootstrap .row 속성 바꿔줌 */
+  /* .wrap 안에 들어오게 하려고 10px 줌 */
+  margin-left: 12px;
+}
+
+#character .char_wrap > .char:last-child{
+  /* 서비스 크기에 맞게 bootstrap .row 속성 바꿔줌 */
+  /* .wrap 안에 들어오게 하려고 10px 줌 */
+  margin-right: 12px;
+}
+
+/* 선택된 캐릭터에 박스 쉐도우 효과주기 */
+#character div.checked {
+  box-shadow: 0px 0px 0px 12px #d2eee1;
+}
+
+#character .char > img {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* --캐릭터 설명-- */
+#character .char_des {
+  width: 100%;
+  height: 234px;
+  background: white;
+  box-sizing: border-box;
+  border: 5px solid #77c88f;
+  border-radius: 32px;
+  text-align: center;
+  padding: 27px;
+}
+
+#character .char_des > span {
+  font-size: 1.2em;
+  position: relative;
+}
+
+/* 캐릭터 이름 아래 언더라인 */
+#character .char_des > span::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 8px;
+  border-radius: 4px;
+  background: #77c88f;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#character .char_des > p {
+  padding-top: 32px;
+}
+
+
+/* -- HOME PAGE ------------------------------------------------------------------------- */
+/* --뒤로가기, 설정, 가이드 버튼-- */
+#home .btn_wrap img {
+  width: 62px;
+}
+
+#home .btn_wrap > button, #home .push_btn_wrap > button  {
+  display: block;
+}
+
+#home .push_btn_wrap {
+  padding-top: 140px;
+}
+
+#home .btn_small_wrap {
+  padding-top: 48px;
+}
+
+/* --home page 밑 부분 배경-- */
+#home .ground {
+  width: 120%;
+  height: 220px;
+  border-radius: 45%;
+  background: #d2eee1;
+  position: absolute;
+  bottom: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* --내 캐릭터-- */
+/* 캐릭터 애니메이션 */
+@keyframes charMove {
+  from {
+    bottom: 0;
+    left: 50%;
+  }
+
+  25% {
+    bottom: 0;
+    left: 85%;
+  }
+
+  75% {
+    bottom: 0;
+    left: 15%;
+  }
+
+  to {
+    bottom: 0;
+    left: 50%;
+  }
+
+}
+
+#home .mychar {
+  /* 기본 위치 설정 */
+  width: 152px;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  /* 애니메이션 */
+  animation-duration: 15s;
+  animation-name: charMove;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* 내 캐릭터 이미지 */
+#home .mychar > img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  /* 캐릭터가 제일 위에 오도록 설정 */
+  z-index: 4;
+}
+
+/* 그림자 */
+#home .mychar > .mychar_shadow {
+  width: 75%;
+  height: 40px;
+  opacity: 0.3;
+  background: #333333;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* --가이드-- */
+.setting_small {
+  width: 30px;
+}
+
+
+/* -- SETTING PAGE ------------------------------------------------------------------------- */
+#setting .bg_blue {
+  width: 180px;
+  text-align: center;
+  margin: 6em auto 2em auto;
+  font-size: 24px;
+  padding: 0.6em 1.2em;
+  border-radius: 16px;
+  color: white;
+  background: #80a5dc;
+}
+
+#setting .timer_wrap .item {
+  padding-bottom: 4em;
+}
+
+#setting .timer_wrap label {
+  display: block;
+  font-size: 24px;
+}
+
+#setting input[type=radio], #setting input[type=radio]:checked {
+  appearance: none;
+  background: white;
+  border: 5px solid #80a5dc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+}
+
+#setting input[type=radio]:checked {
+  background: #80a5dc;
+  border: 5px solid white;
+  box-shadow: 0px 0px 0px 5px #80a5dc;
+}
+
+
+/* -- MONSTER PAGE ------------------------------------------------------------------------- */
+/* 배경 이미지 */
+#monster {
+  background-image: url("/images/monster.png");
+  background-size: cover;
+}
+
+#monster h2 {
+  color: white;
+  padding-bottom: 310px;
+}
+
+/* 밑에 버튼 크기 및 위치 설정 */
+#monster .btn_wrap img {
+  width: 62px;
+}
+
+#monster .btn_wrap > a:first-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#monster .btn_wrap > .btn_book:last-child {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* 꼭꼭몬 크기 및 위치 설정 */
+#monster .monster_wrap img {
+  width: 100%;
+}
+
+/* 몬스터 그림자 */
+.mon_shadow {
+  position: relative;
+}
+
+.mon_shadow::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 15%;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.1);
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --몬스터 정보 레이어-- */
+.monster_info {
+  width: 100%;
+}
+
+.monster_info_layer img {
+  width: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
+.monster_info_layer .layer_box {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+}
+
+.monster_info_layer .mon_name {
+  font-size: 20px;
+  margin: 2em auto;
+  display: inline-block;
+  position: relative;
+
+}
+
+.monster_info_layer .mon_name::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 10px;
+  border-radius: 5px;
+  background: #80a5dc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 몬스터 그림자 */
+.monster_info_layer .mon_shadow::after {
+  width: 60%;
+}
+
+/* --몬스터 북-- */
+#monster .monster_book_layer .item > div:first-child {
+  width: 70px;
+  height: 70px;
+  border: 5px solid #80a5dc;
+  border-radius: 14px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #80a5dc;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+}
+
+#monster .monster_book_layer .item > div:first-child  > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#monster .monster_book_layer .item > div:last-child {
+  font-size: 24px;
+  text-align: center;
+  color: #80a5dc;
+}
+
+#monster .book_row {
+  margin-bottom: 30px;
+}
+
+
+/* --GAME PAGE------------------------------------------------------------------------- */
+/* 게임 배경 */
+#game {
+  background-image: none;
+}
+
+#game .header_bg {
+  width: 100%;
+  height: 125px;
+  background: #ff9191;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#game .footer_bg {
+  width: 150%;
+  height: 382px;
+  background: #ff9191;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* --overlay-- */
+#game .layer_box > p > span:first-child {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 1.2em;
+}
+
+#game .layer_box > p {
+  font-size: 24px;
+  text-align: center;
+}
+
+#game .layer_box > p > span.save_mon {
+  display: inline;
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* 타이머 */
+#game .timer {
+  font-size: 32px;
+  color: white;
+  height: 48px;
+}
+
+.timer_stop, .no_music {
+  cursor: pointer;
+}
+
+/* --응원문구-- */
+#game .cheerup {
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 0.4em;
+  background : white;
+  border: 5px solid #ff9191;
+  border-radius: 32px;
+  margin-top: 2em;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* --게임 캐릭터-- */
+#game .myMonster > img, #game .badMonster > img {
+  width: 100%;
+}
+
+#game .myMonster {
+  width: 142px;
+  transition-duration: 0.3s;
+  z-index: 9;
+}
+
+#game .badMonster {
+  width: 142px;
+  transition-duration: 0.3s;
+}
+
+#game .test {
+  width: 100%;
+  height: 280px;
+}
+
+/* --게임 캐릭터 파워-- */
+#game .power {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #ff9191;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+#game .power::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 100%;
+  border-radius: 10px;
+  background: #ff4242;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 상승 파워 */
+
+/* --내 캐릭터 공격-- */
+#game .attack {
+  position: absolute;
+  width: 60px;
+  bottom: 20%;
+  left: 30%;
+  z-index: 7;
+  visibility: hidden;
+}
+/* --게임 끝내기 버튼-- */
+#game .btn_gameover {
+  width: 100%;
+  height: 74px;
+  line-height: 74px;
+  background: white;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 36px;
+  color: #a5a5a5;
+  margin-top: 30px;
+  box-sizing: border-box;
+  border: none;
+  appearance: none;
+}
+
+#game .btn_gameover:hover {
+  color: #ff6d6d;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="character" class="mobile_container">
+    <!-- 맨 위 배경 이미지 -->
+    <img class="roof" src="images/roof_green.png" alt="roof_pink">
+
+    <div class="wrap">
+      <!-- 캐릭터 설정 -->
+      <div class="char_wrap row-vh d-flex flex-row justify-content-between">
+        <!-- 캐릭터 1 -->
+        <div class="item char checked">
+          <img src="images/체리둥이몬.png" alt="체리둥이몬">
+        </div>
+
+        <!-- 캐릭터 2 -->
+        <div class="item char">
+          <img src="images/밥풀몬.png" alt="밥풀몬">
+        </div>
+      </div>
+      <!-- END : .char_wrap -->
+
+      <div class="char_des">
+        <span>체리둥이몬</span>
+        <p>안녕 나는 체리둥이몬이야! 나랑 같이 몬스터 친구들을 구하러 가자~</p>
+      </div>
+
+      <form>
+        <input type="hidden" name="set_char" id="set_char">
+        <!-- SUBMIT 버튼 -->
+        <div class="btn_bottom">
+          <input class="btn_char btn_push" type="button" value="캐릭터 설정 완료">
+        </div>
+      </form>
+    </div>
+    <!-- END : .wrap -->
+  </div>
+  <!-- END : #mobile_container -->
+</body>
+</html>

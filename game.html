@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="game" class="mobile_container">
+    <!-- --정지, 시간, 노래 배경 ----------------------------------------------------------->
+    <div class="header_bg"></div>
+    
+    <!-- 몬스터 배경 -->
+    <div class="footer_bg"></div>
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <div class="wrap">
+      <div class="row">
+        <!-- 타이머 일시정지 버튼 -->
+        <div class="col-4"><img class="col-5 timer_stop" src="images/stop.png" alt=""></div>
+
+        <!-- 타이머 -->
+        <div class="timer col-4 text-center"></div>
+
+        <!-- 노래 정지 버튼 -->
+        <div class="col-4">
+          <img class="no_music col-5 offset-6" src="images/music.png" >
+          
+          <!-- 노래 재생 -->
+          <div class="playMusic">
+            <audio id="audio" loop>
+              <source src="audio/gamePlay.mp3">
+            </audio>
+          </div>
+        </div>
+        <!-- END : .playMusic -->
+      </div>
+      <!-- END : .row -->
+
+      <!-- 응원문구 -->
+      <div class="cheerup">시작</div>
+
+      <!-- 빈공간 만들어줌 -->
+      <div class="test"></div>
+
+      <!-- 내 캐릭터 오디오 -->
+      <audio id="myMonster_audio">
+        <source src="audio/sound_bite.mp3">
+      </audio>
+
+      <!-- 괴물 캐릭터 오디오 -->
+      <audio id="badMonster_audio">
+        <source src="audio/sound_btnCancel.mp3">
+      </audio>
+
+      <!-- 싸우는 캐릭터  -->
+      <div class="row-vh d-flex flex-row align-items-start justify-content-between">
+        
+        <img src="images/체리둥이몬공격.png" class="attack">
+        
+        <div class="myMonster mon_shadow">
+          <div class="power"></div>
+          <img src="images/체리둥이몬.png" alt="체리둥이몬" style="transform: scaleX(-1);">
+        </div>
+
+        <div class="badMonster mon_shadow">
+          <img src="images/badMonster.png" alt="괴물">
+        </div>
+      </div>
+      <!-- END : .row-vh -->
+
+      <!-- 게임 끝 버튼 -->
+      <button class="btn_gameover">밥을 다 먹었다면 여기를 눌러주세요!</button>
+    </div>
+    <!-- END : .wrap -->
+
+
+    <!-- --게임 시작 전 주의사항 레이어--------------------------------------------------  -->
+    <!-- First layer -->
+    <div class="overlay first_overlay">
+      <div class="wrap">
+        <div class="layer_box layer_pink">
+          <p>
+            <span>잠깐!</span>
+            얼굴이 <span>화면 안</span>에 다 들어오게 해주세요!
+          </p>
+
+          <!-- 확인 버튼 -->
+          <button class="layer_button layer_button_pink">확인</button>
+        </div>
+        <!-- END : .layer_box -->
+      </div>
+      <!-- END : .wrap -->
+    </div>
+    <!-- END : .first_overlay -->
+
+    <!-- Second layer -->
+    <div class="overlay second_overlay">
+      <div class="wrap">
+        <div class="layer_box layer_pink">
+          <p>
+            <span>잠깐!</span>
+            <span>꼭꼭 오래</span> 씹을수록 다양한 꼭꼭몬들을 구할 수 있어요!
+          </p>
+
+          <!-- 확인 버튼 -->
+          <button class="layer_button layer_button_pink">확인</button>
+        </div>
+        <!-- END : .layer_box -->
+      </div>
+      <!-- END : .wrap -->
+    </div>
+    <!-- END : .second_overlay -->
+
+
+    <!-- --구해낸 꼭꼭몬 레이어--------------------------------------------------------- -->
+    <div class="overlay monster_info_layer">
+      <div class="wrap">
+        <div class="layer_box layer_pink">
+          <div class="monster_info mon_shadow">
+            <img src="images/밥풀몬.png" alt="밥풀몬">
+          </div>
+
+          <p class="mt-5 mb-5">
+            <span class="save_mon">밥풀몬</span>을 구했어요!  
+          </p>
+
+          <!-- 확인 버튼 -->
+          <button class="layer_button layer_button_pink">확인</button>
+        </div>
+        <!-- END : .layer_box -->
+      </div>
+      <!-- END : .wrap -->
+    </div>
+    <!-- END : .monster_info_layer -->
+  </div>
+  <!-- END : #mobile_container -->
+
+  
+</body>
+</html>

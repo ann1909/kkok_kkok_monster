@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="setting" class="mobile_container">
+    <div class="wrap">
+      <!-- 뒤로가기 버튼 -->
+      <a href="home.html" class="btn_back">
+        <img src="images/back_blue.png" alt="">
+      </a>
+
+      <!-- 시간 설정 -->
+      <div class="bg_blue">시간</div>
+
+      <form>
+        <div class="timer_wrap">
+          <div class="row-vh d-flex flex-row justify-content-between">
+            <div class="item">
+              <input type="radio" value="0" name="time" id="none">
+              <label for="none">&nbsp;X</label>
+            </div>
+    
+            <div class="item">
+              <input type="radio" value="10" name="time" id="ten">
+              <label for="ten">10분</label>
+            </div>
+
+            <div class="item">
+              <input type="radio" value="15" name="time" id="fifteen" checked>
+              <label for="fifteen">15분</label>
+            </div>
+    
+            <div class="item">
+              <input type="radio" value="20" name="time" id="twenty">
+              <label for="twenty">20분</label>
+            </div>
+          </div>
+        </div>
+        <!-- END : .timer_wrap -->
+
+        <!-- 완료 버튼 -->
+        <input class="finish_btn finish_blue" type="button" value="설정완료">
+      </form>
+    </div>
+    <!-- END : .wrap -->
+  </div>
+  <!-- END : #mobile_container -->
+
+</body>
+</html>

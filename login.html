@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="login" class="mobile_container">
+    <!-- 맨 위 배경 이미지 -->
+    <img class="roof" src="images/roof_pink.png" alt="roof_pink">
+
+    <div class="wrap">
+      <!-- 닫기 버튼 -->
+      <a href="index.html"><img class="close" src="images/close_pink.png" alt="close_pink"></a>
+
+      <form>
+        <!-- 로그인 양식 -->
+        <div id="login_form">
+          <label class="mb-5">
+            <h3>아이디</h3>
+            <input type="text" name="loginUserId" id="loginUserId">
+          </label>
+
+          <label>
+            <h3>비밀번호</h3>
+            <input type="text" name="loginUserPw" id="loginUserPw">
+          </label>
+        </div>
+        <!-- END : #login_form -->
+
+        <!-- SUBMIT 버튼 -->
+        <div class="btn_bottom">
+          <input class="btn_login btn_push" type="button" value="로그인">
+        </div>
+      </form>
+    </div>
+    <!-- END : .wrap -->
+  </div>
+  <!-- END : #mobile_container -->
+</body>
+</html>

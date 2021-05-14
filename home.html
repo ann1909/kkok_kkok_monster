@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="home" class="mobile_container">
+    <!-- 맨 위 배경 이미지 -->
+    <img class="roof" src="images/roof_green.png" alt="roof_green">
+
+    <div class="wrap">
+      <div class="btn_wrap row-vh d-flex flex-row justify-content-between">
+        <!-- 뒤로가기 버튼 -->
+        <a href="index.html" class="item">
+          <img src="images/back.png" alt="뒤로가기">
+        </a>
+
+        <!-- 빈 공간 임시지정 -->
+        <div class="item">
+          <div style="visibility: hidden; width: 60px; "></div>
+        </div>
+
+        <!-- 설정 버튼 -->
+        <a href="setting.html" class="item">
+          <img src="images/setting.png" alt="설정">
+        </a>
+
+        <!-- 가이드 버튼 -->
+        <div class="item btn_guide">
+          <img src="images/info.png" alt="가이드">
+        </div>
+
+        <!-- 로그아웃 버튼 -->
+        <div class="item btn_logout">
+          <img src="images/logout.png" alt="가이드">
+        </div>
+      </div>
+      <!-- END : .btn_wrap -->
+      
+      <div class="push_btn_wrap">
+        <!-- 꼭꼭몬 구하기 버튼 -->
+        <!-- .btn_login 사용 이유 :  로그인 버튼 색상과 동일 -->
+        <button class="btn_game btn_login btn_push">꼭꼭몬 구하기</button>
+
+        <div class="btn_small_wrap row-vh d-flex flex-row justify-content-between">
+          <!-- 꼭꼭몬 마을 버튼 -->
+          <!-- .btn_join 사용 이유 :  회원가입 버튼 색상과 동일 -->
+          <button class="btn_mon btn_join btn_push">꼭꼭몬<br>마을</button>
+  
+          <!-- 캐릭터 변경 버튼 -->
+          <!-- .btn_char 사용 이유 :  캐릭터 선택 버튼 색상과 동일 -->
+          <button class="btn_mychar btn_char btn_push">캐릭터<br>변경</button>
+        </div>
+      </div>
+      <!-- END : .push_btn_wrap -->
+
+      <!-- 움직이는 내 캐릭터 / gif 곧 만들 예정 -->
+      <div class="mychar">
+        <img src="images/cherry.gif" alt="체리둥이몬">
+        
+        <div class="mychar_shadow"></div>
+      </div>
+    </div>
+    <!-- END : .wrap -->
+
+    <!-- home page 밑 부분 배경 -->
+    <div class="ground"></div>
+    
+    <!-- guide layer -->
+    <div class="overlay">
+      <div class="wrap">
+        <div class="layer_box layer_green">
+          <p>
+            1. <img class="setting_small" src="images/setting.png" alt="setting small"> 을 누르면 게임 시간을 설정할 수 있습니다.
+            <br>
+            <br>
+            2. '<span>캐릭터 변경</span>' 버튼을 누르면 캐릭터 변경이 가능합니다.
+            <br>
+            <br>
+            3. '<span>꼭꼭몬 마을</span>' 버튼을 누르면 구해낸 꼭꼭몬들을 볼 수 있습니다.
+          </p>
+
+          <!-- 확인 버튼 -->
+          <button class="layer_button layer_button_green">확인</button>
+        </div>
+        <!-- END : .layer_box -->
+      </div>
+      <!-- END : .wrap -->
+    </div>
+    <!-- END : .overlay -->
+  </div>
+  <!-- END : #mobile_container -->
+</body>
+</html>

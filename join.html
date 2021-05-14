@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="join" class="mobile_container">
+    <!-- 맨 위 배경 이미지 -->
+    <img class="roof" src="images/roof_blue.png" alt="roof_blue">
+
+    <div class="wrap">
+      <!-- 닫기 버튼 -->
+      <a href="index.html"><img class="close" src="images/close_blue.png" alt="close_blue"></a>
+
+      <form>
+        <!-- 로그인 양식 -->
+        <div id="join_form">
+          <label>
+            <h3>이름</h3>
+            <input type="text" name="userName" id="userName">
+          </label>
+
+          <label>
+            <h3>생일</h3>
+            <input type="text" name="userBirth" id="userBirth">
+          </label>
+
+          <label>
+            <h3>별명</h3>
+            <input type="text" name="userNick" id="userNick">
+          </label>
+
+          <label>
+            <h3>아이디</h3>
+            <input type="text" name="userId" id="userId">
+          </label>
+
+          <label>
+            <h3>비밀번호</h3>
+            <input type="text" name="userPw" id="userPw">
+          </label>
+        </div>
+        <!-- END : #join_form -->
+
+        <!-- SUBMIT 버튼 -->
+        <div class="btn_bottom">
+          <input class="btn_join btn_push" type="button" value="회원가입">
+        </div>
+      </form>
+    </div>
+    <!-- END : .wrap -->
+  </div>
+  <!-- END : #mobile_container -->
+</body>
+</html>
