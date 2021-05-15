@@ -30,7 +30,7 @@ input {
   position: relative;
   
   /* 배경 이미지 */
-  background-image: url("/images/bg.png");
+  background-image: url("mobile_bg.png");
   background-size: cover;
 }
 
@@ -189,6 +189,7 @@ input {
   transform: translateX(-50%);
 }
 
+/* 파랑 */
 .finish_blue {
   border: 8px solid #80a5dc;
   color: #80a5dc;
@@ -197,6 +198,18 @@ input {
 .finish_blue:hover, .finish_blue:active {
   background: #80a5dc;
   border: 8px solid #80a5dc;
+  color: white;
+}
+
+/* 초록 */
+.finish_green {
+  border: 8px solid #77c88f;
+  color: #77c88f;
+}
+
+.finish_blue:hover, .finish_blue:active {
+  background: #77c88f;
+  border: 8px solid #77c88f;
   color: white;
 }
 
@@ -628,7 +641,7 @@ input {
 /* -- MONSTER PAGE ------------------------------------------------------------------------- */
 /* 배경 이미지 */
 #monster {
-  background-image: url("/images/monster.png");
+  background-image: url("monster.png");
   background-size: cover;
 }
 
@@ -894,3 +907,89 @@ input {
 #game .btn_gameover:hover {
   color: #ff6d6d;
 }
+
+
+/* -- PROFILE ------------------------------------------------------------------------- */
+
+/* 사용자 캐릭터 이미지 */
+#profile .user_mon_profile > img{
+  width: 100%;
+  border: 10px solid #77c88f;
+  border-radius: 30px;
+  background: white;
+}
+
+/* 사용자 별명과 캐릭터 이름 */
+#profile .user_mon_text {
+  text-align: center;
+  padding-top: 24px;
+}
+
+#profile .user_profile {
+  padding-top: 20px;
+}
+
+/* --캐릭터 설정 슬라이더의 버튼-- */
+#profile .arrow_btn_wrap {
+  padding-top: 10em;
+}
+
+#profile .arrow_btn_wrap > button {
+  appearance: none;
+  border: none;
+  background: transparent;
+}
+
+#profile .arrow_btn_wrap > button > img {
+  width: 55px;
+}
+
+
+/* --캐릭터 이미지 슬라이드-- */
+/* 슬라이드 이미지 크기 및 보더 설정 */
+#profile .char_slider_item > img {
+  width: 160px;
+  border: 10px solid #77c88f;
+  box-shadow: 0px 0px 0px 10px #d2eee1;
+  border-radius: 30px;
+  background: white;
+}
+
+/* 슬라이더 고정 뷰 */
+#profile .charFixSlide {
+  width: 180px;
+  overflow: hidden;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 슬라이드 아이템 감싸주는 역할  
+  : 유저의 몬스터 만큼 width값 바꿔줘야함
+*/
+#profile .char_slider_wrap {
+  width: 0;
+  text-align: center;
+  transition-duration: 0.2s;
+}
+
+/* 슬라이드 아이템 옆으로 나란히 배열 */
+#profile .char_slider_wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#profile .char_slider_item {
+  float: left;
+  margin: 10px;
+}
+
+/* 몬스터 이름 */
+#profile .char_slider_wrap h2 {
+  padding-top: 20px;
+}
+
+
+

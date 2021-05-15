@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main/css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main/js/main.js"></script>
+</head>
+<body>
+  <!-- 모바일 컨테이너 -->
+  <div id="profile" class="mobile_container">
+    <!-- 맨 위 배경 이미지 -->
+    <img class="roof" src="images/character_roof.png">
+
+    <div class="wrap">
+      <!-- 뒤로가기 버튼 -->
+      <a href="home.html" class="btn_back">
+        <img src="images/back_green.png">
+      </a>
+      
+      <!-- 사용자 캐릭터 프로필 -->
+      <div class="row user_profile">
+        <!-- 캐릭터 이미지 부분 -->
+        <div class="col-6 user_mon_profile">
+          <!-- 캐릭터 이미지 변경해야할 곳 -->
+          <img src="images/profile01.png" alt="">
+        </div>
+
+        <!-- 글 부분 -->
+        <div class="col-6 user_mon_text">
+          <p>
+            <!-- 사용자 별명 -->
+            <span id="userNick_profile">지호야힘내</span>님의
+            <br>꼭꼭몬은?
+          </p>
+
+          <!-- 사용자 캐락터 -->
+          <h3>'<span id="userChar_profile">체리둥이몬</span>'</h3>
+        </div>
+      </div>
+      <!-- END : .user_prfile --> 
+      
+      <!-- 캐릭터 설정 이전 & 다음 버튼 -->
+      <div class="arrow_btn_wrap row-vh d-flex flex-row justify-content-between">
+        <!-- 이전 버튼 -->
+        <button class="prev_btn">
+          <img src="images/prev.png">
+        </button>
+
+        <!-- 다음 버튼 -->
+        <button class="next_btn">
+          <img src="images/next.png">
+        </button>
+      </div>
+      <!-- END : .arrow_btn_wrap -->
+
+      <!-- 캐릭터 슬라이드 -->
+      <div class="charFixSlide">
+        <div class="char_slider_wrap">
+        </div>
+      </div>
+      <!-- END : .charFixSlide  -->
+      
+      <form>
+        <input type="hidden" id="userCharChange">
+        <!-- 완료 버튼 -->
+        <input class="finish_btn finish_green" type="button" value="캐릭터 설정완료">
+      </form>
+    </div>
+    <!-- END : .wrap -->
+  </div>
+  <!-- END : #mobile_container -->
+</body>
+</html>

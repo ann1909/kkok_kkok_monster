@@ -345,6 +345,84 @@ $(function() {
     }, 600);
   }// fightMonster
 
+
+  // 캐릭터 파워
+  // 3초마다 이전 씹은 횟수와 현재씹은 횟수를 비교하여 게이지 상승
   
+  // 현재 씹은 횟수 변수
+  var chew = 0;
+  
+  function power(chewing) {
+    // 이전 씹은 횟수
+    var temp = chewing;
+
+  }
+  
+  
+  // --PROFILE-----------------------------------------------------------------------------------------
+  // 사용자가 구해낸 몬스터 리스트가 들어가야 함
+  var slideData = [
+    {src : 'images/profile01.png', name : '체리둥이몬1'},
+    {src : 'images/profile01.png', name : '체리둥이몬2'},
+    {src : 'images/profile01.png', name : '체리둥이몬3'},
+    {src : 'images/profile01.png', name : '체리둥이몬4'},
+  ];
+
+  // 슬라이드 아이템 리스트를 감싸는 역할
+  let slideWrap = $('#profile .char_slider_wrap'); 
+  
+  // 감싸는 박스의 폭 결정
+  var slideWidth = slideData.length * 100;
+
+  // 폭 css 스타일 주기
+  slideWrap.css('width', slideWidth + '%');
+
+  // 사용자가 구해낸 몬스터만큼 슬라이드 아이템 생성
+  function slidePrint() {
+    slideData.forEach(function(vl, idx) {
+      let slideItem = '<div class="char_slider_item">'
+                    + '<img src="'+ vl.src +'">'
+                    + '<h2>'+ vl.name +'</h2>'
+                    + '</div>';
+
+      slideWrap.append(slideItem);
+    });
+  }// slidePrint
+
+  // slideprint 함수 호출
+  slidePrint();
+
+  // 화면에 보이는 캐릭터가 사용자가 선택한 캐릭터 이름
+  // input #userCharChange의 value값으로 보내줌
+  var updateChar = slideWrap.children().first().find('h2').text();
+
+  // --버튼에 클릭 이벤트 발생시 슬라이드가 넘어감--
+  // 이전 버튼 클릭
+  $('.prev_btn').on('click', function() {
+    $(this).children().attr('src', 'images/prev_on.png');
+    $(this).siblings().children().attr('src', 'images/next.png');
+    // slideWrap의 마지막 자식이 첫번째로 옴 
+    slideWrap.children().last().prependTo(slideWrap);
+    
+    // #userCharChange value값으로 보낼 값
+    updateChar = slideWrap.children().first().find('h2').text();
+
+    console.log(updateChar);
+  });
+
+  $('.next_btn').on('click', function() {
+    $(this).children().attr('src', 'images/next_on.png');
+    $(this).siblings().children().attr('src', 'images/prev.png');
+    // slideWrap의 첫번째 자식이 마지막으로 옴 
+    slideWrap.children().first().appendTo(slideWrap);
+    
+    // #userCharChange value값으로 보낼 값
+    updateChar = slideWrap.children().first().find('h2').text();
+
+    console.log(updateChar);
+  });
+
+  // 이 값을 db users 테이블에 update!
+  $('#userCharChange').val(updateChar);
 
 });// on.ready
